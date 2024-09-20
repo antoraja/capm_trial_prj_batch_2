@@ -1,0 +1,5 @@
+Retrieving logs for app capmtrialproject-srv in org aa7ce525trial / space dev as antoraja1990de@gmail.com...
+
+   2024-09-16T15:43:32.60+0000 [CELL/0] OUT Cell 40a73ee2-c30d-4beb-931c-937f2cbb923b destroying container for instance 402de9d5-123d-45f6-5043-8a8d
+   2024-09-16T15:43:32.72+0000 [PROXY/0] OUT Exit status 137
+   2024-09-16T15:43:34.06+0000 [CELL/0] OUT Cell 40a73ee2-c30d-4beb-931c-937f2cbb923b successfully destroyed container for instance 402de9d5-123d-45f6-5043-8a8d

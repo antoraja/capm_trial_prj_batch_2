@@ -1,0 +1,52 @@
+{
+  "name": "capmtrialproject",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@cap-js/hana": "^1",
+    "@sap/cds": "^8",
+    "@sap/xssec": "^4.2.1",
+    "express": "^4",
+    "passport": "^0.7.0",
+    "cds-swagger-ui-express": "^0.5.0",
+    "@sap/cds-odata-v2-adapter-proxy": "^1"
+  },
+  "devDependencies": {
+    "@cap-js/cds-types": "^0.6",
+    "@cap-js/sqlite": "^1",
+    "@sap/cds-dk": "^8",
+    "@sap/ux-specification": "^1.120.17",
+    "rimraf": "^5.0.5"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-captrialui": "cds watch --open captrialui/webapp/index.html?sap-ui-xx-viewCache=false",
+    "undeploy": "cf undeploy capmtrialproject --delete-services --delete-service-keys --delete-service-brokers",
+    "build": "rimraf resources mta_archives && mbt build --mtar archive",
+    "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sql"
+      },
+      "uaa": {
+        "kind": "hana"
+      },
+      "auth": {
+        "[production]": {
+          "strategy": "JWT"
+        }
+      }
+    },
+    "hana": {
+      "deploy-format": "hdbtable"
+    },
+    "features": {
+      "fiori_preview": true
+    }
+  }
+}

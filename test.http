@@ -1,0 +1,7 @@
+###
+GET http://localhost:4004/odata/v4/timesheet/EmployeesTimesheet
+content-type: application/json
+
+###
+GET http://localhost:4004/v2/odata/v4/timesheet/TrialFunction
+content-type: application/json

@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/UIComponent","sap/ui/Device","captrialui/captrialui/model/models"],function(i,e,t){"use strict";return i.extend("captrialui.captrialui.Component",{metadata:{manifest:"json"},init:function(){i.prototype.init.apply(this,arguments);this.getRouter().initialize();this.setModel(t.createDeviceModel(),"device")}})});
+//# sourceMappingURL=Component.js.map
