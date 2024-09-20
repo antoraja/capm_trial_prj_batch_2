@@ -34,3 +34,10 @@ entity Customer  {
         EmployeeName : String(40);
         CompanyName  : String(40);
 }
+
+entity Customer1  {
+    key ID           : UUID;
+        EmployeeID   : String(10);
+        EmployeeName : String(40);
+        CompanyName  : String(40);
+}
