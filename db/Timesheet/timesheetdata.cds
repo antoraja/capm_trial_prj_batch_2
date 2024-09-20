@@ -24,12 +24,7 @@ entity EmployeeAddress   : managed , localaspects.common {
         PostCode  : String(40);
 }
 
-entity EmployeeAddress1   : managed , localaspects.common {
-    key ID           : UUID;
-        EmployeeCity   : String(10) default '';
-        EmployeeStreet : String(40);
-        PostCode  : String(40);
-}
+
 
 
 
